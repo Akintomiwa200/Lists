@@ -34,9 +34,9 @@ class App extends Component{
         {this.state.showperson ? 
         
         <div>
-          <Person name={this.state.persons[0].name} age={this.state.persons[0].age}></Person>
-          <Person name={this.state.persons[1].name} age={this.state.persons[1].age}></Person>
-          <Person name={this.state.persons[2].name} age={this.state.persons[2].age}></Person>
+          {this.state.persons.map((persons)=>{
+            return <Person name={persons.name} age={persons.age} />
+          })}
         </div>
         : null
         
