@@ -34,8 +34,11 @@ class App extends Component{
         {this.state.showperson ? 
         
         <div>
-          {this.state.persons.map((persons)=>{
-            return <Person name={persons.name} age={persons.age} />
+          {this.state.persons.map((person, index)=>{
+            
+              return <Person name = {person.name} key={index} age =  {person.age} />
+        
+            
           })}
         </div>
         : null
